@@ -29,6 +29,10 @@ if($(window).width() >= 1200){
     $('.other').on("mousemove",(e) =>{
         paralax(e, '.planet-3');
     });
+    $('.project-card').on('click', function(){
+        $('.fornt').css('transform', 'rotateY(180deg)');
+        $('.back').css('transform', 'rotateY(360deg)');
+    })
 }
 //////////////////////////////////////animation///////////////
 let coordsTop;
