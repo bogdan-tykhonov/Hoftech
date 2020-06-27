@@ -18,16 +18,18 @@ $(`${targetClass}`).css(
 )
 }
 
-$('.preview').on("mousemove",(e) =>{
-    paralax(e, '.planet-1');
-    paralax2(e,'.preview-text');
-});
-$('.about-company').on("mousemove",(e) =>{
-    paralax(e, '.planet-2');
-});
-$('.other').on("mousemove",(e) =>{
-    paralax(e, '.planet-3');
-});
+if($(window).width() >= 1200){
+    $('.preview').on("mousemove",(e) =>{
+        paralax(e, '.planet-1');
+        paralax2(e,'.preview-text');
+    });
+    $('.about-company').on("mousemove",(e) =>{
+        paralax(e, '.planet-2');
+    });
+    $('.other').on("mousemove",(e) =>{
+        paralax(e, '.planet-3');
+    });
+}
 //////////////////////////////////////animation///////////////
 let coordsTop;
 function slide(idName,side ){
