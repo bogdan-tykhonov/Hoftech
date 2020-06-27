@@ -80,39 +80,6 @@ ul li {
   border-radius: 10px;
 }
 
-.logo:hover::before {
-  -webkit-transform: scaleY(1) !important;
-          transform: scaleY(1) !important;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.logo:hover::after {
-  -webkit-transform: scaleX(1) !important;
-          transform: scaleX(1) !important;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.logo:hover span {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  color: white;
-}
-
-.logo:hover img {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.logo:hover h1 {
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  color: #DD3471;
-}
-
 a {
   position: relative;
   text-decoration: none;

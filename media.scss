@@ -115,3 +115,27 @@
         margin-bottom: 30px$i;
     }
 }
+@media(min-width:1200px){
+    .logo:hover {
+        &::before{
+        transform: scaleY(1)$i;
+        transition:all 0.3s ease;
+        }
+        &::after{
+            transform: scaleX(1)$i;
+        transition:all 0.3s ease;
+        }
+        span{
+            transition:all 0.3s ease;
+            color: white;
+        }
+        img{
+            transition:all 0.3s ease;
+            transform: rotate(180deg);
+        }
+        h1{
+            transition: 0.3s ease;
+            color: #DD3471;
+        }
+    }
+}
