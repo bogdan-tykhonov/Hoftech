@@ -29,9 +29,13 @@ if($(window).width() >= 1200){
     $('.other').on("mousemove",(e) =>{
         paralax(e, '.planet-3');
     });
-    $('.project-card').on('click', function(){
-        $('.fornt').css('transform', 'rotateY(180deg)');
-        $('.back').css('transform', 'rotateY(360deg)');
+}
+if($(window).width() < 1200){
+    $('.portfolio').on('click', function(event){
+     
+       if(!$(event.target).hasClass('project')) return;
+        $(event.target).css('transform', 'rotateY(180deg)');
+        $(event.target).parent().children('a').children('.back').css('transform', 'rotateY(360deg)');
     })
 }
 //////////////////////////////////////animation///////////////

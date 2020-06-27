@@ -116,6 +116,12 @@
     }
 }
 @media(min-width:1200px){
+    .project-card:hover .front{
+        transform: rotateY(180deg);
+    }
+    .project-card:hover .back{
+        transform: rotateY(360deg);
+    }
     .logo:hover {
         &::before{
         transform: scaleY(1)$i;

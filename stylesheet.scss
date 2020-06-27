@@ -308,12 +308,7 @@ width: 66%;
             transform: rotateY(180deg);
         }
     }
-    .project-card:hover .front{
-        transform: rotateY(180deg);
-    }
-    .project-card:hover .back{
-        transform: rotateY(360deg);
-    }
+    
 
    .project{
        background-position: center;

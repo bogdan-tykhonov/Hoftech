@@ -432,16 +432,6 @@ nav button:hover {
           transform: rotateY(180deg);
 }
 
-.portfolio .project-card:hover .front {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-.portfolio .project-card:hover .back {
-  -webkit-transform: rotateY(360deg);
-          transform: rotateY(360deg);
-}
-
 .portfolio .project {
   background-position: center;
   width: 100%;

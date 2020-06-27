@@ -151,6 +151,14 @@
 }
 
 @media (min-width: 1200px) {
+  .project-card:hover .front {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  .project-card:hover .back {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
   .logo:hover::before {
     -webkit-transform: scaleY(1) !important;
             transform: scaleY(1) !important;
