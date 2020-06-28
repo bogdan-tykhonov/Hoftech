@@ -1,4 +1,5 @@
 "use strict"
+
 function preloader(){
    $(".loader-wrapper").css({
     'opacity': '0'
@@ -50,13 +51,12 @@ if($(window).width() < 1200){
 }
 //////////////////////////////////////animation///////////////
 let coordsTop;
-function slide(idName,side ){
+function slide(idName, side){
 $(`#${idName}`).css(
     `${side}`,"0px"
     )
 }
-function checkCoords(){
-    coordsTop = $(window).scrollTop();
+function bigDeviceAnimation(){
     const blockOffset = $('.services').offset().top;
     if(coordsTop >= blockOffset-400){
        slide('skill-1', 'right');
@@ -65,7 +65,34 @@ function checkCoords(){
            'opacity', '1'
        )
         clearInterval(coordsInterval);
-    }
+       }
+}
+function smallDeviceAnimation(){
+    let rightBlock = $('#skill-3').offset().top;
+    let leftBlock = $('#skill-1').offset().top;
+    let centerBlock = $('#skill-2').offset().top;
+    
+    if(coordsTop >= leftBlock - 600){
+      slide('skill-1', 'right');
+    
+    };
+    if(coordsTop >= rightBlock - 600){
+      slide('skill-3', 'left');
+      clearInterval(coordsInterval);
+    };
+    if(coordsTop >= centerBlock - 600){
+      $('#skill-2').css(
+          'opacity', '1'
+      );
+    };
+}
+function checkCoords(){
+    coordsTop = $(window).scrollTop();
+  if($(window).width() > 1050){
+   bigDeviceAnimation();
+  }else{
+  smallDeviceAnimation();
+  }
 }
 const coordsInterval =  setInterval(checkCoords, 100);
 //////////////////////slowlyNav//////////////
