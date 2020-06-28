@@ -4,6 +4,11 @@ $i:!important;
 $shadow: 0px 0px 35px #DD3471;
 @mixin font($weight, $minSize, $lastSize) {
     font-weight: $weight;
-    font-size: calc(#{$minSize} + #{$lastSize} * ((100vw - 320px) / (1440 - 320)));
+    font-size: calc(#{$minSize} + #{$lastSize} * ((#{$container} - 320px) / (1440 - 320)));
+}
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 

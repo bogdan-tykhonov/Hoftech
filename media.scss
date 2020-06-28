@@ -1,16 +1,19 @@
 @import "variables.scss";
-@media(max-width:1320px){
-       .portfolio{
-        .project-card{
-            width:100%;
-            height:100%;
-           }
-        li:nth-child(odd){
-            margin-right:calc(#{$container} - 4px - (#{$container}*43/100)*2)$i;
-        }
-       }
-}
+// @media(min-width:1320px){
+//        .portfolio{
+//         .project-card{
+//             width:100%;
+//             height:100%;
+//            }
+//         li:nth-child(odd){
+//             margin-right:calc(#{$container} - 4px - (#{$container}*43/100)*2)$i;
+//         }
+//        }
+// }
 @media(max-width:1050px){
+    .web-site{
+        margin-bottom: 50px;
+    }
 .small-nav{
     display: flex;
 }
@@ -52,6 +55,13 @@
     }
 }
 @media(max-width:600px){
+    .web-site img{
+        width: 60px;
+    }
+    .about-company-content img, .other-content img{
+right: 0$i;
+left: 0$i;
+    }
     .gamburg{
         text-align: end;
         ul{
@@ -114,6 +124,9 @@
         margin-top: 0px$i;
         margin-bottom: 30px$i;
     }
+    .small-nav ul li {
+        width: auto$i;
+    }
 }
 @media(min-width:1200px){
     .project-card:hover .front{
@@ -143,5 +156,30 @@
             transition: 0.3s ease;
             color: #DD3471;
         }
+    }
+}
+@media(min-width:1440px){
+    .web-site{
+        width: 450px$i;
+        p{
+            width: 100%$i;
+        }
+    }
+}
+@media(min-width:1600px){
+    .logo h1{
+        font-size: 25px;
+    }
+   .big-nav{
+       a{
+           font-size: 20px;
+       }
+   }
+}
+@media(min-width:1770px){
+    .portfolio{
+        li:nth-child(odd){
+                       margin-right:215px$i;
+                   }
     }
 }

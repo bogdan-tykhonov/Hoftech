@@ -1,5 +1,15 @@
 "use strict"
-
+function preloader(){
+   $(".loader-wrapper").css({
+    'opacity': '0'
+   }); 
+   setTimeout(function(){
+    $(".loader-wrapper").css(
+        'display','none'
+       );
+}, 1000)
+};
+setTimeout(preloader, 2000);
 //////////////////paralax///////////////
 function paralax(e, targetClass){
     const x = e.pageX/$(window).width();
